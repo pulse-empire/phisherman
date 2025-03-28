@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{background-image: url('netmage.jpg');
+            text-align: center;
+            color: white;
+            
+        }
+        div{
+            
+            width: 25%;
+            background-color:transparent;
+            backdrop-filter: blur(10px);
+        
+        }
+       
+        input{
+            padding: 15px;
+            width: 80%;
+            margin: 10px;
+            background-color: transparent;
+            border: 0.3px solid white;
+            border-radius:5px;
+        }
+        button{
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: transparent;
+        }
+        .sign-in{
+            background-color: rgb(255, 65, 65);
+            color: white;
+        }
+        .sign{
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="sign">Sign In</p>
+        <input type="email" placeholder="Email or mobile number" id="email">
+        <br>
+        <input type="password" placeholder="Password" id="pass">
+        <br>
+        <button type="submit" class="sign-in">Sign in</button>
+        <p>OR</p>
+        <button>Use a Sign-in Code</button>
+        <br>
+        <a href="https://netflix.com/loginhelp">Forgot password?</a>
+        <br>
+        <input type="checkbox"><label for="checkbox">Remember me</label>
+        <p>New to Neflix?<span>Sign up now</span></p>
+    </div>
+</body>
+</html>
